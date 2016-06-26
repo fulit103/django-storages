@@ -16,8 +16,9 @@ except ImportError:
         "See https://github.com/WindowsAzure/azure-sdk-for-python")
 
 try:
-    # azure-storage 0.20.0
-    from azure.storage.blob.blobservice import BlobService
+    # azure-storage 0.32.0
+    from azure.storage.blob import BlockBlobService as BlobService
+    #from azure.storage.blob.blobservice import BlobService
     from azure.common import AzureMissingResourceHttpError
 except ImportError:
     from azure.storage import BlobService
